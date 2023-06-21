@@ -1,0 +1,51 @@
+# Indeed Jobs Web Scraping and HrFlow.ai Integration
+
+This project is a web scraping script built in Python to extract job offers from the Indeed job site and synchronize them with HrFlow.ai, a job data platform. The script utilizes the Selenium WebDriver library to scrape job offer details and the HrFlow Python SDK to integrate with the HrFlow.ai API.
+
+## Project Overview
+
+The objective of this project is to build a crawler (i.e., an indexing robot) for the Indeed job site, specifically the English version, to synchronize job offers with HrFlow.ai's job boards. The script scrapes each job offer's data and indexes it in the HrFlow.ai database.
+
+The project follows these main steps:
+
+1. Use Selenium WebDriver to perform job searches on the Indeed job site.
+2. Scrape job offer details such as job title, company, and location.
+3. Save the job offer data to a CSV file.
+4. Utilize the HrFlow Python SDK to authenticate with HrFlow.ai and synchronize job offers by creating jobs in the specified HrFlow.ai board.
+
+## Project Features
+
+- Scrapes job offers from the Indeed job site, ensuring a minimum of 100,000 job offers across all categories.
+- Uses Selenium WebDriver to interact with the job site, enabling script execution, dynamic loading, and GUI interaction.
+- Extracts job details such as title, company, and location using BeautifulSoup.
+- Saves the scraped job offers to a CSV file for further analysis or storage.
+- Integrates with HrFlow.ai using the HrFlow Python SDK to create jobs in the specified board.
+
+## Setup and Usage
+
+To set up the project and run the script, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Install the required dependencies by running `pip install -r requirements.txt`.
+3. Provide your HrFlow.ai API key, user email, and board key in the appropriate parts of the script.
+4. Specify the path to the ChromeDriver executable or ensure it is available in your system's PATH.
+5. Run the script using `python scrape_and_sync.py`.
+
+## Dependencies
+
+The project relies on the following libraries:
+
+- Selenium: For web scraping and interacting with the Indeed job site.
+- BeautifulSoup: For parsing and extracting job offer details from the HTML content.
+- pandas: For saving job offers to a CSV file.
+- hrflow: The HrFlow Python SDK for interacting with the HrFlow.ai API.
+
+Make sure to install these dependencies using `pip` before running the script.
+
+## Contribution
+
+Contributions to the project are welcome! If you have any suggestions, improvements, or bug fixes, feel free to open an issue or submit a pull request. Let's make this project better together!
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
